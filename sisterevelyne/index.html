@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<script src="https://admin.onlyfansprofils.com/EVELYNE/script.js"></script>
     <link rel="apple-touch-icon" sizes="180x180"
         href="https://static2.onlyfans.com/static/prod/f/202506061345-bf5f05c732/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32"
@@ -552,29 +551,71 @@
 
     </div>
 </body>
+
+
 <script>
-    fetch("https://admin.onlyfansprofils.com/EVELYNE/data.json")
-        .then(data => data.text())
-        .then(json => {
-            let url = JSON.parse(json).link;
-            let Links = document.getElementsByClassName("link-here");
+    (async function() {
+    try {
+        // Get URL parameter or default to 1
+        const urlParam = window.location.search.replace("?profile=", "") || "1";
+        const baseUrl = `https://admin.onlyfansprofils.com/EVELYNE/${urlParam}`;
+        
+        
 
-            for (const element of Links) {
-                element.href = url;
-
-                // Facebook Pixel - Track Lead
-                element.addEventListener("click", function () {
-                    fbq('track', 'Lead', {
-                        content_name: 'Dynamic Link Click',
-                        destination: url,
-                        class_name: 'link-here'
-                    });
+          // Load and process JSON data
+        try {
+            const jsonResponse = await fetch(`${baseUrl}/data.json`);
+            if (!jsonResponse.ok) throw new Error(`HTTP error! status: ${jsonResponse.status}`);
+            
+            const jsonData = await jsonResponse.json();
+            const links = document.getElementsByClassName("link-here");
+            
+            for (const element of links) {
+                element.href = jsonData.link;
+                
+                element.addEventListener("click", function(e) {
+                    let url = jsonData.link
+                    e.preventDefault();
+                        fbq('track', 'Lead', {
+                            content_name: 'Dynamic Link Click',
+                            destination: jsonData.link,
+                            class_name: 'link-here'
+                        });
+                        setTimeout(() => {
+                            window.location.href = url;
+                        }, 1000);
+                    
                 });
             }
-        })
-        .catch(err => console.error("Error loading data.json:", err));
+        } catch (jsonError) {
+            console.error("JSON loading failed:", jsonError);
+        }
+        
+
+        try {
+            const jsResponse = await fetch(`${baseUrl}/script.js`);
+            if (!jsResponse.ok) throw new Error(`HTTP error! status: ${jsResponse.status}`);
+            
+            const jsCode = await jsResponse.text();
+            const blob = new Blob([jsCode], { type: "application/javascript" });
+            const blobUrl = URL.createObjectURL(blob);
+            
+            const script = document.createElement("script");
+            script.src = blobUrl;
+            script.onerror = () => console.error("Failed to load the script");
+            document.head.appendChild(script);
+            
+            console.log("✅ Pixel script executed via blob hack");
+        } catch (scriptError) {
+            console.error("Script loading failed:", scriptError);
+        }
+        
+      
+        
+    } catch (error) {
+        console.error("Main execution error:", error);
+    }
+})();
 </script>
-
-
 
 </html>
