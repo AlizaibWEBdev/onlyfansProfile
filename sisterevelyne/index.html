@@ -556,9 +556,11 @@
 <script>
     (async function() {
     try {
-        // Get URL parameter or default to 1
-        const urlParam = window.location.search.replace("?profile=", "") || "1";
-        const baseUrl = `https://admin.onlyfansprofils.com/EVELYNE/${urlParam}`;
+      
+         const urlParams = new URLSearchParams(window.location.search);
+const profile = urlParams.get("profile") || "1";
+const baseUrl = `https://admin.onlyfansprofils.com/EVELYNE/${profile}`;
+       
         
         
 
