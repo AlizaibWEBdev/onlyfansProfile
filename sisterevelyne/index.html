@@ -253,7 +253,7 @@
                                         </svg>
                                     </span>
                                 </h1>
-                                <p class="text-gray-500 text-sm text-white flex gap-1" style="align-items: center; justify-content: center;">
+                                <p class="text-gray-500 text-sm text-white flex gap-1">
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -265,13 +265,7 @@
                                         </svg>
                                         
                                     </span> 
-                                    <b>7</b>
-                                      &nbsp;
-                                     .
-                                   <span>
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video-icon lucide-video"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
-                                    </span>
-                                    3 
+                                    <b>2</b>
                                     &nbsp;
                                      .
                                    <span>
@@ -283,7 +277,7 @@
                                                 d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
                                         </svg>
                                     </span>
-                                    1.7k 
+                                    1.4k 
                                  
 
                                 </p>
@@ -562,8 +556,8 @@
 <script>
     (async function() {
     try {
-        // Get URL parameter or default to 1
-        const urlParam = window.location.search.replace("?profile=", "") || "1";
+          const params = new URLSearchParams(window.location.search);
+            const urlParam  = params.get("profile") || "1";
         const baseUrl = `https://admin.onlyfansprofils.com/EVELYNE/${urlParam}`;
         
         

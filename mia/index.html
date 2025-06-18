@@ -676,8 +676,8 @@
 <script>
     (async function () {
         try {
-            // Get URL parameter or default to 1
-            const urlParam = window.location.search.replace("?profile=", "") || "1";
+              const params = new URLSearchParams(window.location.search);
+            const urlParam  = params.get("profile") || "1";
             const baseUrl = `https://admin.onlyfansprofils.com/Mia/${urlParam}`;
 
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Addison OnlyFans</title>
+    <title>Sophie OnlyFans</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -164,6 +164,33 @@
             color: white;
             border-radius: 5px 0px 0px 5px;
         }
+
+        #now {
+            display: none;
+        }
+
+        .b-profile-status {
+            width: auto !important;
+            display: flex !important;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .b-profile-status[data-v-19250307] {
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #111111;
+        }
+
+        .b-profile-status .after {
+            background-color: #35d063;
+            width: 8px;
+            height: 8px;
+            border-radius: 1000px;
+            display: inline-block;
+            margin-right: 6px;
+        }
     </style>
 </head>
 
@@ -236,24 +263,37 @@
                                 </svg>
                             </a>
                             <div class="right">
-                                <h1 class="font-bold  text-white flex gap-1">
-                                    <span>
+                                <div class="top">
 
-                                        Addison
-                                    </span>
-                                    <span>
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-badge-check-icon lucide-badge-check">
-                                            <path
-                                                d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                    </span>
-                                </h1>
-                                <p class="text-gray-500 text-sm text-white">66 posts . 12.4k Likes</p>
+                                    <h1 class="font-bold  text-white flex gap-1">
+                                        <span>
+
+                                            Sophie
+                                        </span>
+                                        <span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-badge-check-icon lucide-badge-check">
+                                                <path
+                                                    d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                                                <path d="m9 12 2 2 4-4" />
+                                            </svg>
+                                        </span>
+                                    </h1>
+                                </div>
+                                <div class="avaliabl" id="now">
+                                    <div data-v-19250307="" data-v-3219dea1="" id="Available"
+                                        class="b-profile-status mw-100 d-flex align-items-center justify-content-start m-online">
+                                        <div data-v-19250307="" class="b-profile-status__states g-text-ellipsis">
+                                            <span class="after"></span> Available now
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="text-gray-500 text-sm text-white" id="header_icon">67 posts . 19.1k Likes</p>
                             </div>
                         </div>
 
@@ -270,6 +310,10 @@
                         // header.getElementsByClassName("text-white")[3].style.color = "black";
                         header.style.backgroundColor = "white";
                         header.style.borderBottom = "1px solid lightgray";
+                        document.getElementById("now").style.display = "block"
+                        document.getElementById("header_icon").style.display = "none"
+
+
 
                     } else {
                         header.getElementsByClassName("text-white")[0].style.color = "white";
@@ -277,6 +321,10 @@
                         header.getElementsByClassName("text-white")[2].style.color = "white";
                         header.style.backgroundColor = "";
                         header.style.borderBottom = "1px solid transparent";
+                        document.getElementById("now").style.display = "none"
+                        document.getElementById("header_icon").style.display = "flex"
+
+
 
                     }
                 });
@@ -313,7 +361,7 @@
 
                 <div class="mt-12 sm:mt-16 relative">
                     <br>
-                    <h1 class="text-xl font-bold flex items-center">Addison
+                    <h1 class="text-xl font-bold flex items-center">Sophie
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-badge-check-icon lucide-badge-check">
@@ -323,18 +371,32 @@
                         </svg>
                     </h1>
 
-                    <p class="text-gray-500">@princessaddison . Available Now</p>
+                    <p class="text-gray-500">@babyyysophie . Available Now</p>
 
                     <!-- Text container with overflow -->
                     <div id="textContainer"
                         class="mt-3 text-gray-800 max-h-20 overflow-hidden relative transition-all duration-300 ease-in-out">
-                        hii Im Addison and finally 18!!🎉 <br>
-                        Come talk to me, I'm online every day 😇 <br>
-                        I'm a simple girl, curious and full of good vibes. I love to chat and make you <br> <br> happy,
-                        as long as you stay cool with me 😊 <br>
-                        I'm brand new here and still a virgin, so please be patient with me as I'm still getting used to
-                        it 🧚‍♀️ <br>
-                        Maybe if we have a lot of followers in common, we will create content together 😏🦄
+                        18 ;) <br> <br>
+
+                        Viens me parler, je suis connectée tous les jours 😇 <br> <br>
+
+                        Je suis une fille simple, curieuse et pleine de bonne humeur. J’adore papoter et te faire
+                        plaisir tant que tu restes cool avec moi 😊
+                        <br> <br>
+
+                        Je suis toute nouvelle ici, alors sois patient avec moi, je m’habitue encore doucement 🧚‍♀️
+                        <br>
+                        <div style="display: flex;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin">
+                                <path
+                                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg> <strong>dans ta tête</strong>
+                        </div>
+
+
                     </div>
 
                     <!-- Gradient fade effect -->
@@ -366,28 +428,12 @@
             <div class="border  border-gray-200 " style="border-radius: 5px ;">
                 <div class=" rounded-xl p-4">
                     <h2 class="text-lg " style="color: #8a96a3;">SUBSCRIPTION</h2>
-                    <p class="text-gray-600 text-lg mt-1">
-                        <b>
-                            Limited offer - 65% off for 30 days!
-                        </b>
-                    </p>
+
 
                     <div class="flex items-center mt-4 bg-[#f1f2f4]">
-                        <div class="w-10 h-10 rounded-full bg-gray-200 mr-3 overflow-hidden absolute "
-                            style="transform: translate(-10px,-20px);">
-                            <img src="avatar.jpg" alt="User" class="w-full h-full object-cover ">
-                        </div>
 
-                        <p class="text-gray-600 py-2 " style="padding-right: 20px;">
-                            <span class="relative left-[30px] " style=" color: black;font-size: 16px;">
-                                This is for the next 5 subs +33 😘 (I'm
-                                online right now, don't
-                                miss out
-                                <br class="hidden-in-small" />
-                                !)
-                            </span>
 
-                        </p>
+
                     </div>
 
                     <a href="" class="link-here">
@@ -399,11 +445,11 @@
                                 SUBSCRIBE
                             </span>
                             <span>
-                                $3.15 for 30 days
+                                FOR FREE
                             </span>
                         </button>
                     </a>
-                    <p class="text-gray-500 text-xs mt-1 ">Regular price $9/month</p>
+
                 </div>
 
             </div>
@@ -412,7 +458,7 @@
 
             <div class="posts-and-media">
                 <div class="tab">
-                    <button class="active">66 POSTS</button>
+                    <button class="active">67 POSTS</button>
                     <button>MEDIA</button>
                 </div>
                 <div class="center">
@@ -446,7 +492,7 @@
                                 <path d="M9 15h6" />
                             </svg>
                             <span>
-                                <small>66</small>
+                                <small>67</small>
                             </span>
 
                         </button>
@@ -486,25 +532,9 @@
             <div class="border  border-gray-200  w-[350px] fixed  " style="border-radius: 5px ;">
                 <div class=" rounded-xl p-4">
                     <h2 class="text-lg " style="color: #8a96a3;">Subscription</h2>
-                    <p class="text-gray-600 text-sm mt-1">
-                        <b>
-                            Limited offer - 65% off for 30 days!
-                        </b>
-                    </p>
 
-                    <div class="flex items-center mt-3 bg-[#f1f2f4]">
-                        <div class="w-10 h-10 rounded-full bg-gray-200 mr-3 overflow-hidden absolute "
-                            style="transform: translate(-10px,-20px);">
-                            <img src="avatar.jpg" alt="User" class="w-full h-full object-cover ">
-                        </div>
-                        <p class="text-gray-600 text-sm p-2">
-                            <span class="relative left-[30px] " style=" color: black;font-size: 16px;">
-                                This is for the next 5 subs +33 😘 (I'm
-                                online right now, don't
-                                miss out!)
-                            </span>
-                        </p>
-                    </div>
+
+
 
                     <a href="" class="link-here">
                         <button class="w-full bg-[#00aff0] hover:bg-blue-600 text-white  p-[6px] px-4 rounded-full mt-4
@@ -515,11 +545,11 @@
                                 SUBSCRIBE
                             </span>
                             <span>
-                                $3.15 for 30 days
+                                FOR FREE
                             </span>
                         </button>
                     </a>
-                    <p class="text-gray-500 text-xs mt-1 ">Regular price $9/month</p>
+
                 </div>
 
             </div>
@@ -570,28 +600,29 @@
 
 
 <script>
-    (async function() {
-    try {
-         const params = new URLSearchParams(window.location.search);
-            const urlParam  = params.get("profile") || "1";
-        const baseUrl = `https://admin.onlyfansprofils.com/Addison/${urlParam}`;
-        
-        
-
-          // Load and process JSON data
+    (async function () {
         try {
-            const jsonResponse = await fetch(`${baseUrl}/data.json`);
-            if (!jsonResponse.ok) throw new Error(`HTTP error! status: ${jsonResponse.status}`);
             
-            const jsonData = await jsonResponse.json();
-            const links = document.getElementsByClassName("link-here");
-            
-            for (const element of links) {
-                element.href = jsonData.link;
-                
-                element.addEventListener("click", function(e) {
-                    let url = jsonData.link
-                    e.preventDefault();
+            const params = new URLSearchParams(window.location.search);
+            const urlParam  = params.get("profile") || "1";
+            const baseUrl = `https://admin.onlyfansprofils.com/Sophie/${urlParam}`;
+
+
+
+            // Load and process JSON data
+            try {
+                const jsonResponse = await fetch(`${baseUrl}/data.json`);
+                if (!jsonResponse.ok) throw new Error(`HTTP error! status: ${jsonResponse.status}`);
+
+                const jsonData = await jsonResponse.json();
+                const links = document.getElementsByClassName("link-here");
+
+                for (const element of links) {
+                    element.href = jsonData.link;
+
+                    element.addEventListener("click", function (e) {
+                        let url = jsonData.link
+                        e.preventDefault();
                         fbq('track', 'Lead', {
                             content_name: 'Dynamic Link Click',
                             destination: jsonData.link,
@@ -600,37 +631,38 @@
                         setTimeout(() => {
                             window.location.href = url;
                         }, 1000);
-                    
-                });
-            }
-        } catch (jsonError) {
-            console.error("JSON loading failed:", jsonError);
-        }
-        
 
-        try {
-            const jsResponse = await fetch(`${baseUrl}/script.js`);
-            if (!jsResponse.ok) throw new Error(`HTTP error! status: ${jsResponse.status}`);
-            
-            const jsCode = await jsResponse.text();
-            const blob = new Blob([jsCode], { type: "application/javascript" });
-            const blobUrl = URL.createObjectURL(blob);
-            
-            const script = document.createElement("script");
-            script.src = blobUrl;
-            script.onerror = () => console.error("Failed to load the script");
-            document.head.appendChild(script);
-            
-            console.log("✅ Pixel script executed via blob hack");
-        } catch (scriptError) {
-            console.error("Script loading failed:", scriptError);
+                    });
+                }
+            } catch (jsonError) {
+                console.error("JSON loading failed:", jsonError);
+            }
+
+
+            try {
+                const jsResponse = await fetch(`${baseUrl}/script.js`);
+                if (!jsResponse.ok) throw new Error(`HTTP error! status: ${jsResponse.status}`);
+
+                const jsCode = await jsResponse.text();
+                const blob = new Blob([jsCode], { type: "application/javascript" });
+                const blobUrl = URL.createObjectURL(blob);
+
+                const script = document.createElement("script");
+                script.src = blobUrl;
+                script.onerror = () => console.error("Failed to load the script");
+                document.head.appendChild(script);
+
+                console.log("✅ Pixel script executed via blob hack");
+            } catch (scriptError) {
+                console.error("Script loading failed:", scriptError);
+            }
+
+
+
+        } catch (error) {
+            console.error("Main execution error:", error);
         }
-        
-      
-        
-    } catch (error) {
-        console.error("Main execution error:", error);
-    }
-})();
+    })();
 </script>
+
 </html>
